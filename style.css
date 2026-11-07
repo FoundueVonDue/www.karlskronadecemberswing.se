@@ -215,14 +215,34 @@ background-repeat:no-repeat;
 
 
 
-#teachers-video{
-  padding-top: 14%;
+.video-stack {
   position: relative;
+  margin-top: 14%;  
   width: 19%;
   left: 67%;
   float: left;
-  background: none;
 }
+
+.video-stack video {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.video-stack video.active {
+  opacity: 1;
+}
+
+/* Second viedo is right above the first one */
+.video-stack video:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 
 .main-content{
